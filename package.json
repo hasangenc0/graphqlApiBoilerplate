@@ -1,0 +1,32 @@
+{
+  "name": "graphql-api-server",
+  "version": "1.0.0",
+  "description": "graphql with express server",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hasan Genc",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.3.1",
+    "bcrypt": "^3.0.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "graphql-resolvers": "^0.3.2",
+    "jsonwebtoken": "^8.4.0",
+    "nodemon": "^1.18.9",
+    "pg": "^7.8.0",
+    "sequelize": "^4.42.0",
+    "uuid": "^3.3.2"
+  }
+}
