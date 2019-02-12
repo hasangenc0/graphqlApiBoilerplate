@@ -13,5 +13,6 @@ export default gql`
     id: ID!
     text: String!
     user: User!
+    createdAt: Date!
   }
 `;
