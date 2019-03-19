@@ -53,10 +53,10 @@ server.installSubscriptionHandlers(httpServer);
 
 const PORT = process.env.PORT || 5000;
 
-const eraseDatabaseOnSync = true; // TODO: Remove in production
+const isTest = process.env.TEST;
 
-sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
-  if (eraseDatabaseOnSync) {
+sequelize.sync({ force: isTest }).then(async () => {
+  if (isTest) {
     createUsersWithMessages(new Date());
   }
 
@@ -69,8 +69,8 @@ sequelize.sync({ force: eraseDatabaseOnSync }).then(async () => {
 const createUsersWithMessages = async date => {
   await models.User.create(
     {
-      username: 'admin',
-      email: 'admin@hotmail.com',
+      username: 'hasan',
+      email: 'hasangencx@hotmail.com',
       password: 'admin*123',
       role: 'ADMIN',
       messages: [
