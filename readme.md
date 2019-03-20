@@ -1,8 +1,14 @@
 # Graphql Api
 
-## Usage
+## :running: Running Server
 ```
 npm run start
+```
+
+## :chart_with_upwards_trend: Running Tests
+```
+npm run start:test
+npm run test
 ```
 ## Built With
 * [Express](https://expressjs.com/) - Web framework for Node.js
