@@ -4,6 +4,15 @@ jobs: # a collection of steps
     working_directory: ~/graphqlApiBoilerplate # directory where steps will run
     docker: # run the steps with Docker
       - image: circleci/node:4.8.2 # primary container;
+      - image: circleci/postgres:10
+        environment:
+          POSTGRES_USER: circleci
+          POSTGRES_DB: circleci
+      environment:
+        NODE_ENV: test
+        POSTGRES_USER: circleci
+        POSTGRES_DB: circleci
+        JWT_SECRET: sekrit
     steps: # a collection of executable commands
       - checkout # special step to check out source code to working directory
       - run:
@@ -19,6 +28,9 @@ jobs: # a collection of steps
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run: # run test server
+          name: start:test
+          command: npm run start:test
       - run: # run tests
           name: test
           command: npm run test
