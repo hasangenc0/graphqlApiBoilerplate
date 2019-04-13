@@ -60,8 +60,8 @@ sequelize.sync({ force: isTest }).then(async () => {
     createUsersWithMessages(new Date());
   }
 
-  httpServer.listen({ port: PORT }, () =>
-    console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
+  httpServer.listen({ port: PORT, hostname: '127.0.0.1' }, () =>
+    console.log(`🚀 Server ready at http://127.0.0.1:${PORT}${server.graphqlPath}`)
   );
 
 });
