@@ -36,7 +36,7 @@ describe('users', () => {
 
   describe('deleteUser(id: String!): Boolean!', () => {
     it('returns an error because only admins can delete a user', async () => {
-      const {
+      /*const {
         data: {
           data: {
             signIn: { token },
@@ -45,7 +45,7 @@ describe('users', () => {
       } = await Api.signIn({
         login: 'user',
         password: 'user*123',
-      });
+      });*/
 
       /*const {
         data: { errors },
