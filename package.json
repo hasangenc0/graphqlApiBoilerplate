@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
-    "mocha": "^6.0.2"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "apollo-server-express": "^2.3.1",
